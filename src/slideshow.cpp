@@ -1,10 +1,12 @@
-#include <mot.h>
+#include "../../libmot/src/mot.h"
+
+#include "slideshow.h"
 
 TriggerTime::TriggerTime() // NOW
 	: HeaderParameter(0x05), timepoint(0)
 { }
 
-TriggerTime::TriggerTime(long timepoint)
+TriggerTime::TriggerTime(int timepoint)
 	: HeaderParameter(0x05), timepoint(timepoint)
 { }
 
@@ -16,12 +18,7 @@ bool TriggerTime::equals(const HeaderParameter& other) const
 
 vector<unsigned char> TriggerTime::encode()
 {
-	bitset<8> bits(charset); // charset(4)
-
-	vector<unsigned char> bytes = bits_to_bytes(bits);
-	copy(name.begin(), name.end(), back_inserter(bytes));
-
-	return bytes;
+	return mot::timepoint_to_encoded_utc(timepoint);
 }
 
 

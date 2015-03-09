@@ -1,12 +1,16 @@
 #ifndef SLIDESHOW_H_
 #define SLIDESHOW_H_
 
+using namespace mot;
+
 class TriggerTime : public HeaderParameter
 {
 
 public:
 
-	TriggerTime(long timepoint);
+	TriggerTime();
+
+	TriggerTime(int timepoint);
 
 	vector<unsigned char> encode();
 
@@ -15,7 +19,8 @@ protected:
 	bool equals(const HeaderParameter& a) const;
 
 private:
-	private long timepoint;
+
+	int timepoint;
 };
 
 

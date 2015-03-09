@@ -9,7 +9,7 @@ else
 	TARGET = libmotslideshow.so
 endif
 
-LDFLAGS= -shared -std=c++11 -stdlib=libc++
+LDFLAGS= -shared -std=c++11 -stdlib=libc++ -L../../libmot -lmot
 
 SOURCES = $(shell echo *.cpp)
 HEADERS = $(shell echo *.h)
