@@ -99,6 +99,5 @@ int main(int argc, char* argv[])
 		cout << "segment size: " << segment->getSize() << endl;
 	}
 
-
   return 0;
 }

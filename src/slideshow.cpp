@@ -16,7 +16,7 @@ bool TriggerTime::equals(const HeaderParameter& other) const
     return that != nullptr && (this->timepoint == that->timepoint);
 }
 
-vector<unsigned char> TriggerTime::encode()
+vector<unsigned char> TriggerTime::encodeData()
 {
 	return mot::timepoint_to_encoded_utc(timepoint);
 }

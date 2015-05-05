@@ -12,7 +12,7 @@ public:
 
 	TriggerTime(int timepoint);
 
-	vector<unsigned char> encode();
+	vector<unsigned char> encodeData();
 
 protected:
 
