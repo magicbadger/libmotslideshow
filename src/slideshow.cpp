@@ -1,4 +1,4 @@
-#include "../../libmot/src/mot.h"
+#include <mot.h>
 
 #include "slideshow.h"
 
