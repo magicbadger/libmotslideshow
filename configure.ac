@@ -130,8 +130,7 @@ case "${host_os}" in
 esac
 
 # Checks for libraries
-AC_CHECK_LIB([pthread], [pthread_create])
-AC_CHECK_LIB([rt], [clock_gettime])
+PKG_CHECK_MODULES([LIBMOT], [mot]) # libmot
 
 # Check whether to build docs / install man pages
 LIBMOTSLIDESHOW_CHECK_DOC_BUILD
